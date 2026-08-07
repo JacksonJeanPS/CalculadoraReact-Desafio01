@@ -1,0 +1,8 @@
+{
+  "short_name": "Calculadora",
+  "name": "Calculadora React Retro",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#16231f",
+  "background_color": "#1d1611"
+}
