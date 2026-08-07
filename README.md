@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Calculadora em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Calculadora web criada para praticar estado, componentes reutilizáveis e estilização com React.
 
-## Available Scripts
+## Problema resolvido
 
-In the project directory, you can run:
+Implementar uma interface simples capaz de executar as quatro operações matemáticas básicas sem recarregar a página.
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Soma, subtração, multiplicação e divisão
+- Entrada de números decimais
+- Limpeza completa do cálculo
+- Resultado atualizado no visor
+- Interface construída com componentes reutilizáveis
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias
 
-### `npm test`
+- React 18
+- JavaScript
+- Styled Components
+- Create React App
+- React Testing Library e Jest
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Arquitetura
 
-### `npm run build`
+```text
+src/
+├── components/
+│   ├── Button/       # Botão reutilizável
+│   └── Input/        # Visor da calculadora
+├── App.js            # Estado e regras das operações
+├── styles.js         # Layout principal
+└── global.js         # Estilos globais
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O estado mantém o número atual, o primeiro operando e a operação selecionada. Os componentes de botão recebem rótulo e callback, mantendo a interface separada da regra principal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Executar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/JacksonJeanPS/CalculadoraReact-Desafio01.git
+cd CalculadoraReact-Desafio01
+npm install
+npm start
+```
 
-### `npm run eject`
+Acesse `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Testes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm test -- --watchAll=false
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Os testes cobrem renderização, soma e limpeza do visor.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Decisões técnicas
 
-## Learn More
+- React Hooks para controlar operações e visor.
+- Styled Components para encapsular os estilos.
+- Componentes pequenos para facilitar manutenção.
+- Testes por comportamento visível ao usuário.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Limitações conhecidas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- A divisão por zero ainda precisa de mensagem específica.
+- Operações encadeadas e correção individual de dígitos ainda não foram implementadas.
+- O tratamento de múltiplos pontos decimais será incluído em uma próxima versão.
 
-### Code Splitting
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ ] Impedir múltiplos separadores decimais
+- [ ] Tratar divisão por zero
+- [ ] Adicionar suporte completo ao teclado
+- [ ] Permitir troca de sinal e porcentagem
+- [ ] Melhorar acessibilidade e foco visível
+- [ ] Publicar demonstração e adicionar print verdadeiro
 
-### Analyzing the Bundle Size
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto educacional desenvolvido durante desafio de React.
