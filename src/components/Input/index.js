@@ -1,10 +1,13 @@
-
 import { InputContainer } from './styles';
 
 const Input = ({ value }) => {
   return (
     <InputContainer>
-      <input disabled value={value} />
+      <input
+        aria-label="Resultado da calculadora"
+        readOnly
+        value={value}
+      />
     </InputContainer>
   );
 }
